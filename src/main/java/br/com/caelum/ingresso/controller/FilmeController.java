@@ -37,7 +37,8 @@ public class FilmeController {
         return modelAndView;
     }
 
-
+    /** metodos que chamam dao para salvar/deletar/alterar 
+    objetos no banco de dados, necessitam dessa anotacao @Transactional **/
     @PostMapping("/admin/filme")
     @Transactional
     public ModelAndView salva(@Valid Filme filme, BindingResult result){
